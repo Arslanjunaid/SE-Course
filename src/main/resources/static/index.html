@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Portal</h1>
+
+        <!-- Login/Register Section -->
+        <div id="auth-section">
+            <h2>Login/Register</h2>
+            <div id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required autocomplete="off">
+                <input type="password" id="login-password" placeholder="Password" required autocomplete="off">
+                <button onclick="login()">Login</button>
+                <button onclick="showRegisterForm()">Register</button>
+                <p id="login-error" style="color: red; display: none;"></p>
+            </div>
+
+            <form id="register-form" style="display: none;" autocomplete="off">
+                <input type="text" id="name" placeholder="Name" required autocomplete="off">
+                <input type="text" id="surname" placeholder="Surname" required autocomplete="off">
+                <input type="email" id="register-email" placeholder="Email" required autocomplete="off">
+                <input type="password" id="register-password" placeholder="Password" required autocomplete="off">
+                <label>
+                    <input type="checkbox" id="isGraduated"> Graduated
+                </label>
+                <button type="button" onclick="register()">Register</button>
+                <p id="register-error" style="color: red; display: none;"></p>
+                <button type="button" onclick="showLoginForm()">Back to Login</button>
+            </form>
+        </div>
+
+        <!-- Main Section (Hidden until logged in) -->
+        <div id="main-section" style="display: none;">
+            <!-- Student Info -->
+            <div id="student-info">
+                <h2>Welcome, <span id="student-name"></span></h2>
+                <p>Student ID: <span id="student-id"></span></p>
+            </div>
+
+           
+
+            <!-- View Courses -->
+            <div>
+                <h3>Available Courses</h3>
+                <ul id="course-list"></ul>
+            </div>
+
+            <!-- Enrol in a Course
+            <div>
+                <h3>Enrol in a Course</h3>
+                <input type="number" id="course-id" placeholder="Course ID">
+                <button onclick="enrolInCourse()">Enrol</button>
+            </div> -->
+
+            <!-- Logout -->
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
