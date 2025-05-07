@@ -50,3 +50,111 @@ li {
     margin: 5px 0;
     border-radius: 4px;
 }
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container */
+.container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+h2, h3 {
+    margin: 15px 0;
+    color: #34495e;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #00263f;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #002944;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #002238;
+}
+
+/* Error messages */
+#error, #login-error, #register-error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Sections */
+#auth-section, #main-section {
+    margin-top: 20px;
+}
+
+#student-info p {
+    margin: 5px 0;
+}
+
+/* Course list */
+#course-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#course-list li {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
